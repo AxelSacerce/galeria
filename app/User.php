@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace Galeria;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

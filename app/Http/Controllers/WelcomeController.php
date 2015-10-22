@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Galeria\Http\Controllers;
 
 class WelcomeController extends Controller {
 
@@ -20,7 +20,9 @@ class WelcomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('guest');
+		/*$this->middleware('guest');*/
+		// aplico el filtro
+		$this->middleware('auth'); 
 	}
 
 	/**
@@ -30,6 +32,7 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+		// le digo hacia dónde quiero que dirija una vez se haya identificado el usuario
 		return view('welcome');
 	}
 
